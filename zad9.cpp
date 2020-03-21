@@ -4,6 +4,7 @@ using namespace std;
 
 double roznica(double(*wsk_f), double a, double b)
 {
+    // Jak ktoś wie o chuj tu chodzi to niech próbuje xD
 }
 
 double f(double w)
@@ -14,7 +15,7 @@ double f(double w)
 int main()
 {
 
-    double (*wsk_f)();
+    double (*wsk_f)(double w);
     wsk_f = &f;
 
     return 0;
