@@ -1,6 +1,6 @@
-# Repozytorium z zadaniami z listy 1 (Podstawy Programowania)
+# Repozytorium z zadaniami z listy 2 (Podstawy Programowania)
 
-Link do zadań: http://icis.pcz.pl/~khalbiniak/students/PP/PP_1.pdf
+Link do zadań: http://icis.pcz.pl/~khalbiniak/students/PP/PP_2.pdf
 
 ### Pierwszy clone na local (wasz komputer):
 ```
