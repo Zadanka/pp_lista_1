@@ -18,7 +18,7 @@ int main()
  
     double *nowa = dodaj_1(tab, 6);
  
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 6; i++)
     {
         cout << nowa[i] << endl;
     }
