@@ -25,6 +25,16 @@ float iloraz(float a, float b)
         return a / b;
 }
 
+float potega(float a, float b)
+{
+        int i, c=a;
+        for (i=1;i<b;i++)
+        {
+            a=a*c;
+        }
+        return a;
+}
+
 
 
 int main ()
@@ -86,9 +96,9 @@ int main ()
           {
           cout << "Podaj liczbe A:"<<endl;
           cin >> a;
-          cout << "Podaj liczbe B:"<<endl;
+          cout << "Podaj liczbe B(wspolczynnik):"<<endl;
           cin >> b;
-          cout << "Wynik:" <<endl<<suma(a,b);
+          cout << "Wynik:" <<endl<<potega(a,b)<<endl;
           break;
           }
         }
