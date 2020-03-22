@@ -92,7 +92,7 @@ int main ()
           break;
           }
         }
-    cout << endl <<"Koniec";
     }
+    cout << endl <<"Koniec";
     return 0;
 }
