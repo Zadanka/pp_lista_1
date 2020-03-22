@@ -48,6 +48,6 @@ int main()
 	cout << "Wartosc wyrazenie wynosi: " << oblicz(x) << endl;
 	return 0;
 }
-
+ 
 
 
