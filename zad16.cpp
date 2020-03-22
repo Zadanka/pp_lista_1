@@ -2,52 +2,46 @@
 
 using namespace std;
 
-double x2(double x)
+float suma(float a, float b)
 {
-    return 3.14*x*x;
+    return a + b;
 }
 
-double x3(double x)
+float roznica(float a, float b)
 {
-    return 10*x*x*x;
+    return a - b;
 }
 
-double suma(double x)
-{	
-	return x3(x) + x2(x);
+float iloczyn(float a, float b)
+{
+    return a * b;
 }
 
-double iloraz(double x)
+float iloraz(float a, float b)
 {
-    return x / 3;
+    return a / b;
 }
 
-double iloraz_dwa(double x)
+float kwadrat(float a)
 {
-    return 1 / (x*x);
+    return a * a;
 }
 
-double roznica(double x)
+float szescian(float a)
 {
-    return iloraz(x) - iloraz_dwa(x);
+    return a * a * a;
 }
 
-double iloczyn(double x)
+float oblicz(float x)
 {
-    return suma(x) * roznica(x);
-}
+    float m1 = suma(iloczyn(10, szescian(x)), iloczyn(3.14, kwadrat(x)));
+    float m2 = roznica(iloraz(x, 3), iloraz(1, kwadrat(x)));
 
-double oblicz(double x)
-{
-	return iloczyn(x);	
+    return iloczyn(m1, m2);
 }
 
 int main()
 {
-	double x=3.0;
-	cout << "Wartosc wyrazenie wynosi: " << oblicz(x) << endl;
-	return 0;
+    cout << oblicz(1.0) << endl;
+    return 0;
 }
- 
-
-
