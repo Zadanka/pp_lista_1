@@ -31,14 +31,15 @@ int main ()
 {
     while(1)
     {
-         // system("cls");
           cout<<"KALKULATOR"<<endl;
           cout<<"1. Dodawanie"<<endl;
           cout<<"2. Odejmowanie"<<endl;
           cout<<"3. Mnozenie"<<endl;
           cout<<"4. Dzielenie"<<endl;
           cout<<"5. Potegowanie"<<endl;
+          cout<<"0. Wyjscie"<<endl;
           cin>>wybor;
+          if (wybor==0) break;
 
           switch(wybor)
         {
@@ -91,6 +92,7 @@ int main ()
           break;
           }
         }
+    cout << endl <<"Koniec";
     }
     return 0;
 }
