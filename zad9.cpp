@@ -2,12 +2,18 @@
 
 using namespace std;
 
-double roznica(double(*wsk_f), double a, double b)
+double roznica(double (*f)(double), double a, double b)
 {
-    // Jak ktoś wie o chuj tu chodzi to niech próbuje xD
+    double x,y;
+	x = f(a);
+	y = f(b);
+	if (x>=y)
+		return x-y;
+	if (x<y)
+		return y-x;
 }
 
-double f(double w)
+double przepisz(double w)
 {
     return w;
 }
@@ -15,8 +21,8 @@ double f(double w)
 int main()
 {
 
-    double (*wsk_f)(double w);
-    wsk_f = &f;
+    double a = 1.4,b = 2.5;
+	cout << "wartosc bezwzgledna z roznicy " << a << " i " << b << " to " << roznica(przepisz,a,b) <<endl;
 
     return 0;
 }
