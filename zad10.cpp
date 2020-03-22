@@ -10,6 +10,6 @@ float suma(float a, float b)
 int main()
 {
 	float a = 10.0, b = 5.0;
-	cout << "Suma wynosi: " << suma(a, b);
+	cout << "Suma wynosi: " << suma(a, b) << endl;
 	return 0;
 }

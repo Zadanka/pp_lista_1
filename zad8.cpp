@@ -23,6 +23,7 @@ int main()
 	{
 		cout << docelowa[i] << " ";
 	}
-
+	cout << endl;
+	
 	return 0;
 }
