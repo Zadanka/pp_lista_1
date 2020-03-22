@@ -93,6 +93,6 @@ int main ()
           }
         }
     }
-    cout << endl <<"Koniec";
+    cout << endl <<"Koniec"<<endl;
     return 0;
 }
