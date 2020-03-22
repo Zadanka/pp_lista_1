@@ -6,17 +6,18 @@ float T[100];
 
 void wyszukiwanie_binarne(float * T,int n)
 {
-    int jaka, wystapienie=0;
+    int jaka;
+    bool wystapienie=false;
     cout << "Jaka liczbe chcesz wyszukac?"<<endl;
     cin >> jaka;
             for (i=0;i<n;i++)
             {
             if (T[i]==jaka)
-            wystapienie=1;
+            wystapienie=true;
             }
-    if (wystapienie==0)
+    if (wystapienie==false)
         cout << "Nie znaleziono!"<<endl;
-    if (wystapienie==1)
+    if (wystapienie==true)
         cout << "Znaleziono!"<<endl;
 
 
