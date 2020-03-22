@@ -1,9 +1,10 @@
 #include <iostream>
 
 using namespace std;
-int n,i, T[100];
+int n,i;
+float T[100];
 
-void wyszukiwanie_binarne(int * T,int n)
+void wyszukiwanie_binarne(float * T,int n)
 {
     int jaka, wystapienie=0;
     cout << "Jaka liczbe chcesz wyszukac?"<<endl;
