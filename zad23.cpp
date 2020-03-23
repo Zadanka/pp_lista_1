@@ -1,13 +1,13 @@
 #include <iostream>
 #include <ctime>
-#include <string>
+
 using namespace std;
 
 double wartosc_wielomianu(float tab[], unsigned int n, float x) 
 {
 	if(n==0) 	
 		return tab[0];
-	return 1.0*x*wartosc_wielomianu(tab,n-1,x);
+	return 1.0*x*wartosc_wielomianu(tab,n-1,x)+tab[n];
 //(x z return) <- x * ((x(x(..(xt[0]+t[1])+t[2])..)+t[n])+t[n+1]) -> (wartosc_wilomianu(n-1))
 }
 char znak(float a)
@@ -41,10 +41,15 @@ int main()
 	cout << "Dla jakiej wartości obliczyć wielomian?"<<endl;
     cin >> x;
 
-    cout << "Wielomain postaci " ;
-	for (i = 0; i < n; i++)
-		cout << wsp[i] << "x^" << n-i << " " << znak(wsp[i]);
-	cout << wsp[n] << "x " << znak(wsp[n+1]) << wsp[n] << " dla x = " << x << "ma wartosc "  << wartosc_wielomianu(wsp, n, x) << endl;
+	for (i=0; i < n+1; i++)
+		cout << wsp[i] << " ";
+	cout << endl;
+	
+	cout << "Wielomain postaci (" ;
+	
+	for (i = 0; i < n-1; i++)
+		cout << wsp[i] << ")x^" << n-i << " + (";
+	cout << wsp[n-1] << ")x + (" << wsp[n] << ") dla x = " << x << " ma wartosc "  << wartosc_wielomianu(wsp, n+1, x) << endl;
 	
 	delete [] wsp;
     return 0;
