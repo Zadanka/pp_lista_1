@@ -8,7 +8,7 @@ double wartosc_wielomianu(float tab[], unsigned int n, float x)
 	if(n==0) 	
 		return tab[0];
 	return 1.0*x*wartosc_wielomianu(tab,n-1,x)+tab[n];
-//(x z return) <- x * ((x(x(..(xt[0]+t[1])+t[2])..)+t[n])+t[n+1]) -> (wartosc_wilomianu(n-1))
+//(x z return) <- x * (x(x(..(xt[0]+t[1])+t[2])..)+t[n])+t[n+1]-> (wartosc_wilomianu(n-1))
 }
 char znak(float a)
 {
@@ -27,7 +27,7 @@ int main()
     unsigned int i,n;
     float x,*wsp;
     
-	cout << "Oblicznie wartosci wielomianu\nKtórego stopnia ma być wielomian?" << endl;
+	cout << "Oblicznie wartosci wielomianu \nKtórego stopnia ma być wielomian?" << endl;
 	cin >> n;
 	
 	wspolczynniki(wsp,n+1);
@@ -38,18 +38,13 @@ int main()
 		cin >> wsp[i];
 	}*/
 	
-	cout << "Dla jakiej wartości obliczyć wielomian?"<<endl;
+	cout << "Podaj wartość x"<<endl;
     cin >> x;
-
+	cout << "Wspolczynniki:\n";
 	for (i=0; i < n+1; i++)
 		cout << wsp[i] << " ";
 	cout << endl;
-	
-	cout << "Wielomain postaci (" ;
-	
-	for (i = 0; i < n-1; i++)
-		cout << wsp[i] << ")x^" << n-i << " + (";
-	cout << wsp[n-1] << ")x + (" << wsp[n] << ") dla x = " << x << " ma wartosc "  << wartosc_wielomianu(wsp, n+1, x) << endl;
+	cout << "Dla x = " << x << " wielomain ma wartosc "  << wartosc_wielomianu(wsp, n+1, x) << endl;
 	
 	delete [] wsp;
     return 0;
